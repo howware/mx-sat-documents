@@ -14,8 +14,8 @@ jobs:
         python: ["3.10", "3.13"]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v3
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.0
       - name: Private-data guard (every versioned file)
         shell: bash
         run: git ls-files -z | xargs -0 python tools/check_private_data.py
