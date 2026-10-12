@@ -18,7 +18,7 @@
 > **Un adaptador de [howware](https://howware.org/es/).** Un howware es tu saber hacer puesto a trabajar con IA.
 > Su núcleo (el protocolo y tus reglas) no sabe nada de archivos, portales ni bases de datos; los **adaptadores**
 > lo conectan con ese entorno, como los puertos y adaptadores de la arquitectura limpia. `mxsat` es el adaptador
-> de los documentos del SAT. No tiene reglas fiscales: si un ingreso va a tasa 0 %, exento o con retenciones lo
+> de los documentos del SAT; lo usa el howware [facturacion](https://github.com/howware/facturacion). No tiene reglas fiscales: si un ingreso va a tasa 0 %, exento o con retenciones lo
 > dicen las facturas que ya emitiste.
 
 ```text

@@ -17,7 +17,8 @@
 
 > **A [howware](https://howware.org) adapter.** A howware is your know-how put to work by AI. Its core (the
 > protocol and your rules) knows nothing about files, portals or databases; **adapters** connect it to that
-> environment, like ports and adapters in clean architecture. `mxsat` is the adapter for SAT documents. It holds
+> environment, like ports and adapters in clean architecture. `mxsat` is the adapter for SAT documents; the
+> [facturacion](https://github.com/howware/facturacion) howware uses it. It holds
 > no tax rules: whether an income is taxed at 0 %, exempt or withheld comes from invoices you already issued.
 
 ```text
