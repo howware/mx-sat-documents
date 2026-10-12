@@ -1,0 +1,4 @@
+#!/bin/sh
+# Blocks commits with SAT documents or personal data.
+# Enable with: git config core.hooksPath tools/git-hooks
+exec python tools/check_private_data.py

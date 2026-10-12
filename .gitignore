@@ -1,0 +1,16 @@
+# SAT documents and private stores: never versioned
+*.xml
+*.pdf
+mxsat-private/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+.claude/settings.local.json

@@ -1,0 +1,55 @@
+[project]
+name = "mx-sat-documents"
+version = "0.1.0"
+description = "AI-ready adapter for Mexican SAT documents (CFDI 4.0 invoices, declaration receipts) with personal data kept local"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Alfredo Pinto" }]
+requires-python = ">=3.10"
+keywords = ["mexico", "sat", "cfdi", "factura", "invoice", "privacy", "llm", "ai-agents", "cli", "howware"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Natural Language :: English",
+    "Natural Language :: Spanish",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Security",
+]
+dependencies = [
+    "pdfplumber>=0.11",
+]
+
+[project.urls]
+Repository = "https://github.com/howware/mx-sat-documents"
+Changelog = "https://github.com/howware/mx-sat-documents/blob/main/CHANGELOG.md"
+
+[project.scripts]
+mxsat = "mxsat.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "reportlab>=4",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mxsat"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]
